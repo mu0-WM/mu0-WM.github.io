@@ -13,6 +13,42 @@ body {
     margin-bottom: 5px;
 }
 
+.publication-links {
+  margin-top: 1.25rem;
+}
+
+.link-block {
+  display: inline-block;
+}
+
+.coming-soon-link {
+  position: relative;
+}
+
+.coming-soon-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 0.35rem 0.65rem;
+  background-color: #363636;
+  color: #fff;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.coming-soon-link:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -105,6 +141,128 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.tldr-box {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #f0f4f8;
+  border-left: 4px solid hsl(204, 86%, 53%);
+  border-radius: 6px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.trace-extract-overview {
+  align-items: flex-start;
+}
+
+.trace-extract-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.trace-extract-title {
+  margin-bottom: 0.5rem !important;
+}
+
+.trace-extract-panel-right .trace-extract-title {
+  margin-bottom: 1.6rem !important;
+}
+
+.trace-extract-media {
+  flex: none;
+}
+
+.trace-extract-dataset-buttons {
+  margin-bottom: 1.25em;
+}
+
+.trace-extract-caption {
+  margin-top: 0.3em !important;
+  line-height: 1.5;
+}
+
+.trace-extract-panel-right .trace-extract-caption {
+  margin-top: 0.8em !important;
+}
+
+.trace-comparison-controls {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.trace-comparison-viewer {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+.trace-comparison-card {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 1rem;
+  height: 100%;
+}
+
+.trace-comparison-label {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.trace-comparison-figure {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ededed;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+.trace-comparison-figure--input {
+  max-width: 250px;
+}
+
+.trace-comparison-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.trace-comparison-description {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #363636;
+  font-style: italic;
+}
+
+.trace-3d-group-buttons {
+  margin-bottom: 1.25em;
+}
+
+.trace-3d-grid {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.trace-3d-viewer {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  background: #000;
+}
+
+.trace-3d-viewer video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .publication-body img {

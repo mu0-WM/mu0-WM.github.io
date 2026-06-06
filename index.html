@@ -1,52 +1,599 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
+  <meta name="description"
+    content="μ₀: A Scalable 3D Interaction-Trace World Model for Cross-Embodiment Manipulation">
+  <meta name="keywords" content="world model, 3D interaction trace, robot manipulation, cross-embodiment">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coming Soon</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+  <title>μ₀: A Scalable 3D Interaction-Trace World Model</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/images/favicon-16x16.png">
-  <style>
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #222222;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: 2rem;
-      font-weight: 600;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1rem;
-      color: #666666;
-    }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
-  <main>
-    <h1>Coming Soon</h1>
-    <p>This page is currently under preparation.</p>
-  </main>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              &mu;<sub>0</sub>: A Scalable 3D Interaction-Trace World Model
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://sjlee.cc/">Seungjae Lee<sup>1</sup><sup>*</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://yoonkyojung.com/">Yoonkyo Jung<sup>1</sup><sup>*</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://ju-suk.github.io/">Jusuk Lee<sup>2</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://jhshin00.github.io/">Jonghun Shin<sup>2</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://amirshahid.github.io/">Amir Hossein Shahidzadeh<sup>1</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://yaochih.github.io/">Yao-Chih Lee<sup>1</sup></a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.co.kr/citations?user=TLQUwIMAAAAJ&hl=en">H. Jin Kim<sup>2</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://jbhuang0604.github.io/">Jia-Bin Huang<sup>1</sup><sup>&dagger;</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://furong-huang.com/">Furong Huang<sup>1</sup><sup>&dagger;</sup></a>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top: 0.25rem;">
+              <span class="eql-cntrb"><small><sup>*</sup>Equal contribution</small></span>
+              <span class="eql-cntrb"><small><sup>&dagger;</sup>Equal advising</small></span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
+              <span class="author-block"><sup>1</sup>University of Maryland, College Park</span>
+              <span class="author-block"><sup>2</sup>Seoul National University</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark coming-soon-link"
+                  data-tooltip="Coming soon!">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark coming-soon-link"
+                  data-tooltip="Coming soon!">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark coming-soon-link"
+                  data-tooltip="Coming soon!">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h3 class="title is-3 has-text-centered">Teaser Video <span class="is-size-5">(with Audio Narration 🔊)</span></h3>
+      <div class="publication-video">
+        <video poster="" autoplay controls muted loop playsinline style="width: 100%; height: auto;">
+          <source src="./teaser.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="tldr-box">
+        <strong>TL;DR:</strong> &mu;<sub>0</sub> is a trace world model that predicts 3D interaction traces instead of
+        pixels or low-level actions, enabling transfer across embodiments from video-only pretraining.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Why 3D Interaction Traces? -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h3 class="title is-4 has-text-centered">Why 3D Interaction Traces?</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pixel-space video models burn capacity on appearance, while action-labeled VLAs are bound to specific
+            embodiments. &mu;<sub>0</sub> occupies the middle ground: it predicts <strong>3D traces of semantic
+              interaction points</strong> &mdash; objects, tools, hands, and contact regions &mdash; that compactly
+            describe what must move, regardless of the robot used.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Results -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h3 class="title is-3 has-text-centered">Results</h3>
+
+
+      <!-- 1. Trace Prediction Quality -->
+      <h4 class="title is-4" style="margin-top: 1rem;">1. Trace Prediction Quality</h4>
+
+
+      <!-- 1.1 Baseline comparison -->
+      <h5 class="title is-5" style="margin-top: 1.5rem;">1.1 Baseline Comparison</h5>
+      <div class="content has-text-justified">
+        <p>
+          Qualitative comparison of predicted traces from &mu;<sub>0</sub> against trace-prediction baselines.
+        </p>
+      </div>      <div class="trace-comparison-controls columns is-vcentered">
+        <div class="column is-5">
+          <div class="field">
+            <label class="label" for="trace-task-selector">Task</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="trace-task-selector" aria-label="Task"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-7">
+          <div class="field">
+            <label class="label" for="trace-baseline-selector">Baseline</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="trace-baseline-selector" aria-label="Baseline"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns trace-comparison-viewer">
+        <div class="column is-5">
+          <div class="trace-comparison-card">
+            <p class="trace-comparison-label has-text-centered"><strong>Input</strong></p>
+            <figure class="image trace-comparison-figure trace-comparison-figure--input">
+              <img id="trace-original-image" src="" alt="Original input frame">
+            </figure>
+            <p id="trace-task-description" class="trace-comparison-description has-text-centered"></p>
+          </div>
+        </div>
+        <div class="column is-7">
+          <div class="trace-comparison-card">
+            <div class="columns is-mobile is-gapless">
+              <div class="column is-6">
+                <p class="trace-comparison-label has-text-centered"><strong>Ground Truth</strong></p>
+                <figure class="image trace-comparison-figure">
+                  <img id="trace-gt-image" src="" alt="Ground truth trace">
+                </figure>
+              </div>
+              <div class="column is-6">
+                <p id="trace-baseline-label" class="trace-comparison-label has-text-centered"><strong>Prediction</strong></p>
+                <figure class="image trace-comparison-figure">
+                  <img id="trace-baseline-image" src="" alt="Baseline prediction">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1.2 3D visualization -->
+      <h5 class="title is-5" style="margin-top: 2.5rem;">1.2 3D Visualization</h5>
+      <div class="content has-text-justified">
+        <p>
+          3D trace visualizations from &mu;<sub>0</sub> predictions.
+        </p>
+      </div>
+
+      <div class="buttons is-centered trace-3d-group-buttons" role="group" aria-label="3D visualization category">
+        <button class="button is-primary" type="button" data-3d-group="robot">Robot Video</button>
+        <button class="button" type="button" data-3d-group="human">Human Video</button>
+      </div>
+
+      <div class="columns trace-3d-grid">
+        <div class="column is-6">
+          <div class="trace-3d-viewer">
+            <video id="trace-3d-video-a" poster="" autoplay controls muted loop playsinline>
+              <source id="trace-3d-source-a" src="" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="trace-3d-viewer">
+            <video id="trace-3d-video-b" poster="" autoplay controls muted loop playsinline>
+              <source id="trace-3d-source-b" src="" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+
+      <!-- 2. Simulation -->
+      <h4 class="title is-4">2. Simulation (RoboCasa365)</h4>
+      <div class="content has-text-justified">
+        <p>
+          &mu;<sub>0</sub> + action expert reaches <strong>30.25%</strong> average success across 8 RoboCasa365 tasks,
+          outperforming &pi;<sub>0</sub> by 5.0 points and TraceGen + action expert by 7.25 points despite using only
+          video-only pretraining. For all pretrained methods, we fully finetune only the action expert on the RoboCasa365 data.
+        </p>
+      </div>
+
+      <div class="results" style="margin-top:1.5em;">
+        <div class="table-title"><strong>Table 1: Simulation results in RoboCasa365.</strong><br>
+          Success rates (%) on 8 representative tasks. <strong>Bold</strong> = best, <u>underline</u> = second-best.
+        </div>
+        <div class="table-container" style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2"><strong>Task</strong></th>
+                <th><strong>No pretraining</strong></th>
+                <th colspan="2"><strong>Action-labeled (VLA)</strong></th>
+                <th colspan="2"><strong>Video-only</strong></th>
+              </tr>
+              <tr>
+                <th>Diffusion Policy</th>
+                <th>&pi;<sub>0</sub></th>
+                <th>&pi;<sub>0.5</sub></th>
+                <th>TraceGen + AE</th>
+                <th>Ours (&mu;<sub>0</sub> + AE)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CloseFridge</td>
+                <td>34</td>
+                <td><u>44</u></td>
+                <td>34</td>
+                <td>38</td>
+                <td><strong>54</strong></td>
+              </tr>
+              <tr>
+                <td>OpenFridge</td>
+                <td><u>28</u></td>
+                <td>12</td>
+                <td>26</td>
+                <td><strong>36</strong></td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>CoffeeServeMug</td>
+                <td>28</td>
+                <td>34</td>
+                <td><strong>48</strong></td>
+                <td><u>42</u></td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>PickPlaceFridgeShelfToDrawer</td>
+                <td>28</td>
+                <td>30</td>
+                <td><strong>66</strong></td>
+                <td>30</td>
+                <td><u>40</u></td>
+              </tr>
+              <tr>
+                <td>TurnOnMicrowave</td>
+                <td>0</td>
+                <td>2</td>
+                <td><strong>12</strong></td>
+                <td>0</td>
+                <td><u>4</u></td>
+              </tr>
+              <tr>
+                <td>SlideToasterOvenRack</td>
+                <td>48</td>
+                <td>46</td>
+                <td><strong>76</strong></td>
+                <td>28</td>
+                <td><u>56</u></td>
+              </tr>
+              <tr>
+                <td>PickPlaceCounterToCabinet</td>
+                <td>6</td>
+                <td><u>18</u></td>
+                <td><strong>54</strong></td>
+                <td>0</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>TurnOnToasterOven</td>
+                <td>10</td>
+                <td>16</td>
+                <td><u>20</u></td>
+                <td>10</td>
+                <td><strong>22</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Average Success Rate (%)</strong></td>
+                <td>22.75</td>
+                <td>25.25</td>
+                <td><strong>42</strong></td>
+                <td>23</td>
+                <td><u>30.25</u></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+
+      <!-- 3. Real-world Evaluation -->
+      <h4 class="title is-4">3. Real-World Evaluation</h4>
+
+      <div class="results">
+        <figure class="image is-fullwidth has-text-justified">
+          <img src="./static/images/real_robot_setup.png" alt="Real-world experimental setup">
+          <figcaption class="has-text-justified" style="margin-top: 0.5em;">
+            <p><strong>Real-world experimental setup and task visualizations.</strong> The setup includes a UR3 robot
+              arm with a two-finger gripper and the three real-world manipulation tasks used for evaluation.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Sample execution videos per baseline (one row per model) -->
+      <div id="realworld-baselines" style="margin-top: 2.5rem;">
+        <h4 class="title is-5 has-text-centered">Sample Execution Videos per Baseline</h4>
+        <p class="has-text-centered" style="margin-bottom: 1.5em;">
+          <em>Real-robot rollouts, speed up 5&times;.</em>
+        </p>
+
+        <div class="container">
+          <p><strong>VLM Only</strong></p>  
+          <div id="realworld-vlm-only-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_vlm_only_6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 1.5rem;">
+          <p><strong>&pi;<sub>0</sub></strong></p>
+          <div id="realworld-pi0-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi0_6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 1.5rem;">
+          <p><strong>&pi;<sub>0.5</sub></strong></p>
+          <div id="realworld-pi05-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_pi05_6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 1.5rem;">
+          <p><strong>TraceGen</strong></p>
+          <div id="realworld-tracegen-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_tracegen_6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 1.5rem;">
+          <p><strong>&mu;<sub>0</sub> (Ours)</strong></p>
+          <div id="realworld-mu0-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/realworld_mu0_6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-world results figure + table -->
+      <div class="results" style="margin-top:2.5em;">
+        <figure class="image is-fullwidth has-text-justified">
+          <img src="./static/images/real_world_results.png" alt="Real-world evaluation results">
+          <figcaption class="has-text-justified" style="margin-top: 0.5em;">
+            <p><strong>Real-world evaluation results.</strong> Bar charts show average success rates (%) for three
+              in-distribution UR3 manipulation tasks. Pick &amp; Place and Pour are averaged over multiple objects.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
 </body>
 
 </html>

@@ -160,6 +160,14 @@ $(document).ready(function() {
         {
           id: 'sample_000023_robot_episode_010.mp4_f000000',
           label: 'Robot episode 010'
+        },
+        {
+          id: 'sample_000011_robot_episode_005.mp4_f000000',
+          label: 'Robot episode 005'
+        },
+        {
+          id: 'sample_000004_put the blue block in the pink area._f000000',
+          label: 'Put the blue block in the pink area'
         }
       ],
       human: [
@@ -170,6 +178,14 @@ $(document).ready(function() {
         {
           id: 'sample_000022_human_episode_007.mp4_f000000',
           label: 'Human episode 007'
+        },
+        {
+          id: 'sample_000034_human_episode_003.mp4_f000000',
+          label: 'Human episode 003'
+        },
+        {
+          id: 'sample_000009_human_episode_006.mp4_f000000',
+          label: 'Human episode 006'
         }
       ]
     };
@@ -201,22 +217,41 @@ $(document).ready(function() {
 
     function updateTrace3DVideos(group) {
       var samples = TRACE_3D_GROUPS[group];
-      var videoA = document.getElementById('trace-3d-video-a');
-      var sourceA = document.getElementById('trace-3d-source-a');
-      var videoB = document.getElementById('trace-3d-video-b');
-      var sourceB = document.getElementById('trace-3d-source-b');
+      var grid = document.getElementById('trace-3d-grid');
 
-      if (!samples || samples.length < 2 || !videoA || !sourceA || !videoB || !sourceB) {
+      if (!samples || !samples.length || !grid) {
         return;
       }
 
-      sourceA.src = './static/videos/3d_vis/' + samples[0].id + '.mp4';
-      sourceB.src = './static/videos/3d_vis/' + samples[1].id + '.mp4';
+      grid.innerHTML = '';
 
-      videoA.load();
-      videoB.load();
-      videoA.play().catch(function () { });
-      videoB.play().catch(function () { });
+      samples.forEach(function (sample) {
+        var column = document.createElement('div');
+        column.className = 'column is-6';
+
+        var viewer = document.createElement('div');
+        viewer.className = 'trace-3d-viewer';
+
+        var video = document.createElement('video');
+        video.setAttribute('poster', '');
+        video.autoplay = true;
+        video.controls = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        var source = document.createElement('source');
+        source.src = './static/videos/3d_vis/' + sample.id + '.mp4';
+        source.type = 'video/mp4';
+
+        video.appendChild(source);
+        viewer.appendChild(video);
+        column.appendChild(viewer);
+        grid.appendChild(column);
+
+        video.load();
+        video.play().catch(function () { });
+      });
     }
 
     if ($('#trace-task-selector').length) {

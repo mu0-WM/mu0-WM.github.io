@@ -252,6 +252,10 @@ body {
   margin: 0 auto;
 }
 
+.trace-3d-grid .column {
+  margin-bottom: 1rem;
+}
+
 .trace-3d-viewer {
   border-radius: 10px;
   overflow: hidden;

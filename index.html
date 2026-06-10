@@ -296,108 +296,18 @@
       <div class="content has-text-justified">
         <p>
           &mu;<sub>0</sub> + action expert reaches <strong>30.25%</strong> average success across 8 RoboCasa365 tasks,
-          outperforming &pi;<sub>0</sub> by 5.0 points and TraceGen + action expert by 7.25 points despite using only
-          video-only pretraining. For all pretrained methods, we fully finetune only the action expert on the RoboCasa365 data.
+          outperforming &pi;<sub>0</sub> by 5.0 points and TraceGen + action expert by 7.25 points despite relying solely on
+          video-only pretraining. 
         </p>
       </div>
 
       <div class="results" style="margin-top:1.5em;">
-        <div class="table-title"><strong>Table 1: Simulation results in RoboCasa365.</strong><br>
-          Success rates (%) on 8 representative tasks. <strong>Bold</strong> = best, <u>underline</u> = second-best.
-        </div>
-        <div class="table-container" style="overflow-x: auto;">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2"><strong>Task</strong></th>
-                <th><strong>No pretraining</strong></th>
-                <th colspan="2"><strong>Action-labeled (VLA)</strong></th>
-                <th colspan="2"><strong>Video-only</strong></th>
-              </tr>
-              <tr>
-                <th>Diffusion Policy</th>
-                <th>&pi;<sub>0</sub></th>
-                <th>&pi;<sub>0.5</sub></th>
-                <th>TraceGen + AE</th>
-                <th>Ours (&mu;<sub>0</sub> + AE)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>CloseFridge</td>
-                <td>34</td>
-                <td><u>44</u></td>
-                <td>34</td>
-                <td>38</td>
-                <td><strong>54</strong></td>
-              </tr>
-              <tr>
-                <td>OpenFridge</td>
-                <td><u>28</u></td>
-                <td>12</td>
-                <td>26</td>
-                <td><strong>36</strong></td>
-                <td>18</td>
-              </tr>
-              <tr>
-                <td>CoffeeServeMug</td>
-                <td>28</td>
-                <td>34</td>
-                <td><strong>48</strong></td>
-                <td><u>42</u></td>
-                <td>36</td>
-              </tr>
-              <tr>
-                <td>PickPlaceFridgeShelfToDrawer</td>
-                <td>28</td>
-                <td>30</td>
-                <td><strong>66</strong></td>
-                <td>30</td>
-                <td><u>40</u></td>
-              </tr>
-              <tr>
-                <td>TurnOnMicrowave</td>
-                <td>0</td>
-                <td>2</td>
-                <td><strong>12</strong></td>
-                <td>0</td>
-                <td><u>4</u></td>
-              </tr>
-              <tr>
-                <td>SlideToasterOvenRack</td>
-                <td>48</td>
-                <td>46</td>
-                <td><strong>76</strong></td>
-                <td>28</td>
-                <td><u>56</u></td>
-              </tr>
-              <tr>
-                <td>PickPlaceCounterToCabinet</td>
-                <td>6</td>
-                <td><u>18</u></td>
-                <td><strong>54</strong></td>
-                <td>0</td>
-                <td>12</td>
-              </tr>
-              <tr>
-                <td>TurnOnToasterOven</td>
-                <td>10</td>
-                <td>16</td>
-                <td><u>20</u></td>
-                <td>10</td>
-                <td><strong>22</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Average Success Rate (%)</strong></td>
-                <td>22.75</td>
-                <td>25.25</td>
-                <td><strong>42</strong></td>
-                <td>23</td>
-                <td><u>30.25</u></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <figure class="image is-fullwidth has-text-justified">
+          <img src="./static/images/simulation_results.png" alt="Simulation results in RoboCasa365">
+          <figcaption class="has-text-justified" style="margin-top: 0.5em;">
+            <p><strong>Simulation results in RoboCasa365.</strong> Success rates (%) on 8 representative RoboCasa365 tasks.</p>
+          </figcaption>
+        </figure>
       </div>
 
       <br>

@@ -21,7 +21,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Google+Sans&family=Noto+Sans&family=Noto+Serif:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -47,23 +47,23 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              &mu;<sub>0</sub>: A Scalable 3D Interaction-Trace World Model
+              <span class="publication-mu0">&mu;<sub>0</sub></span>: A Scalable 3D Interaction-Trace World Model
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://sjlee.cc/">Seungjae Lee<sup>1</sup><sup>*</sup></a>,
+                <a href="https://sjlee.cc/">Seungjae Lee<sup>1</sup><sup>*</sup></a>
               </span>
               <span class="author-block">
-                <a href="https://yoonkyojung.com/">Yoonkyo Jung<sup>1</sup><sup>*</sup></a>,
+                <a href="https://yoonkyojung.com/">Yoonkyo Jung<sup>1</sup><sup>*</sup></a>
               </span>
               <span class="author-block">
-                <a href="https://ju-suk.github.io/">Jusuk Lee<sup>2</sup></a>,
+                <a href="https://ju-suk.github.io/">Jusuk Lee<sup>2</sup></a>
               </span>
               <span class="author-block">
-                <a href="https://jhshin00.github.io/">Jonghun Shin<sup>2</sup></a>,
+                <a href="https://jhshin00.github.io/">Jonghun Shin<sup>2</sup></a>
               </span>
               <span class="author-block">
-                <a href="https://amirshahid.github.io/">Amir Hossein Shahidzadeh<sup>1</sup></a>,
+                <a href="https://amirshahid.github.io/">Amir Hossein Shahidzadeh<sup>1</sup></a>
               </span>
               <span class="author-block">
                 <a href="https://yaochih.github.io/">Yao-Chih Lee<sup>1</sup></a>
@@ -72,21 +72,21 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://scholar.google.co.kr/citations?user=TLQUwIMAAAAJ&hl=en">H. Jin Kim<sup>2</sup></a>,
+                <a href="https://scholar.google.co.kr/citations?user=TLQUwIMAAAAJ&hl=en">H. Jin Kim<sup>2</sup></a>
               </span>
               <span class="author-block">
-                <a href="https://jbhuang0604.github.io/">Jia-Bin Huang<sup>1</sup><sup>&dagger;</sup></a>,
+                <a href="https://jbhuang0604.github.io/">Jia-Bin Huang<sup>1</sup><sup>&dagger;</sup></a>
               </span>
               <span class="author-block">
                 <a href="https://furong-huang.com/">Furong Huang<sup>1</sup><sup>&dagger;</sup></a>
               </span>
             </div>
 
-            <div class="is-size-6 publication-authors" style="margin-top: 0.25rem;">
+            <div class="is-size-6 publication-authors publication-footnotes">
               <span class="eql-cntrb"><small><sup>*</sup>Equal contribution</small></span>
               <span class="eql-cntrb"><small><sup>&dagger;</sup>Equal advising</small></span>
             </div>
-            <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
+            <div class="is-size-5 publication-authors publication-affiliations">
               <span class="author-block"><sup>1</sup>University of Maryland, College Park</span>
               <span class="author-block"><sup>2</sup>Seoul National University</span>
             </div>
@@ -116,7 +116,7 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming soon!)</span>
                 </a>
               </span>
             </div>
@@ -158,6 +158,19 @@
             describe what must move, regardless of the robot used.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Overview -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h3 class="title is-3 has-text-centered">Overview</h3>
+      <div class="publication-video">
+        <video poster="" autoplay controls muted loop playsinline style="width: 100%; height: auto;">
+          <source src="./overview.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
@@ -232,20 +245,47 @@
         </div>
       </div>
 
-      <!-- 1.2 3D visualization -->
-      <h5 class="title is-5" style="margin-top: 2.5rem;">1.2 3D Visualization</h5>
+      <!-- 1.2 Interactive 3D visualization -->
+      <h5 class="title is-5" style="margin-top: 2.5rem;">1.2 Interactive 3D Visualization</h5>
       <div class="content has-text-justified">
         <p>
-          3D trace visualizations from &mu;<sub>0</sub> predictions.
+          Interactive 3D trace predictions from &mu;<sub>0</sub>. Drag to orbit, scroll to zoom.
+          The input frame is shown in the top-left; predicted trajectories are colored by time
+          (purple &rarr; red). Pick a sample below.
         </p>
       </div>
 
-      <div class="buttons is-centered trace-3d-group-buttons" role="group" aria-label="3D visualization category">
-        <button class="button is-primary" type="button" data-3d-group="robot">Robot Video</button>
-        <button class="button" type="button" data-3d-group="human">Human Video</button>
-      </div>
+      <div id="trace-3d-interactive" class="trace-3d-interactive">
+        <div class="buttons is-centered t3d-group-buttons" role="group" aria-label="3D visualization category">
+          <button class="button is-primary" type="button" data-3d-group="robot">Robot</button>
+          <button class="button" type="button" data-3d-group="human">Human</button>
+        </div>
 
-      <div id="trace-3d-grid" class="columns is-multiline trace-3d-grid"></div>
+        <div class="buttons is-centered t3d-samples" role="group" aria-label="3D sample"></div>
+
+        <div class="t3d-stage">
+          <div class="t3d-canvas"></div>
+          <figure class="t3d-overlay">
+            <img class="t3d-overlay-img" src="" alt="Input frame">
+            <figcaption>Input</figcaption>
+          </figure>
+        </div>
+
+        <div class="t3d-controls">
+          <label class="checkbox t3d-control"><input type="checkbox" class="t3d-toggle" data-layer="pred" checked> Prediction</label>
+          <label class="checkbox t3d-control"><input type="checkbox" class="t3d-toggle" data-layer="gt"> Ground truth</label>
+          <label class="checkbox t3d-control"><input type="checkbox" class="t3d-toggle" data-layer="kp" checked> Keypoints</label>
+          <label class="checkbox t3d-control"><input type="checkbox" class="t3d-toggle" data-layer="points" checked> Point cloud</label>
+          <button class="button is-small t3d-reset" type="button">Reset view</button>
+        </div>
+
+        <div class="t3d-timeline">
+          <span class="t3d-timeline-label">Timestep <span class="t3d-timestep-val">32</span> / <span class="t3d-timestep-max">32</span></span>
+          <input type="range" class="t3d-timestep" min="0" max="32" value="32" step="1" aria-label="Timestep">
+        </div>
+
+        <p class="t3d-task has-text-centered"></p>
+      </div>
 
       <br>
       <br>
@@ -578,6 +618,16 @@
     </div>
   </section>
 
+  <!-- Interactive 3D trace viewer (section 1.2) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./static/js/vendor/three/three.module.js",
+        "three/addons/": "./static/js/vendor/three/addons/"
+      }
+    }
+  </script>
+  <script type="module" src="./static/js/trace3d_interactive.js"></script>
 
 </body>
 

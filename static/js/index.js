@@ -190,6 +190,14 @@ $(document).ready(function() {
       ]
     };
 
+    function getTaskEmbodiment(taskId) {
+      return taskId % 2 === 1 ? 'Robot' : 'Human';
+    }
+
+    function getTaskLabel(task) {
+      return 'Task ' + task.id + ' (' + getTaskEmbodiment(task.id) + ')';
+    }
+
     function updateTraceComparison() {
       var taskIndex = $('#trace-task-selector').val();
       var baselineId = $('#trace-baseline-selector').val();
@@ -211,7 +219,7 @@ $(document).ready(function() {
         'src',
         './static/images/' + baseline.id + '/' + task.stem + '.png'
       );
-      $('#trace-task-description').text('Task ' + task.id + ': ' + task.description);
+      $('#trace-task-description').text(task.description);
       $('#trace-baseline-label').html('<strong>' + baseline.label + '</strong>');
     }
 
@@ -259,7 +267,7 @@ $(document).ready(function() {
         $('#trace-task-selector').append(
           $('<option></option>')
             .val(index)
-            .text('Task ' + task.id)
+            .text(getTaskLabel(task))
         );
       });
 

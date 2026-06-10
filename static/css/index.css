@@ -87,6 +87,20 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-mu0 {
+  font-family: 'Noto Serif', 'Castoro', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.12em;
+  letter-spacing: -0.02em;
+  color: #F77F00;
+  margin-right: 0.1em;
+}
+
+.publication-mu0 sub {
+  font-size: 0.58em;
+}
+
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
 }
@@ -116,6 +130,19 @@ body {
 
 .author-block {
   display: inline-block;
+  margin: 0 0.4em;
+}
+
+.publication-footnotes {
+  margin-top: 0.25rem;
+}
+
+.publication-footnotes .eql-cntrb + .eql-cntrb {
+  margin-left: 1.25em;
+}
+
+.publication-affiliations {
+  margin-top: 0.5rem;
 }
 
 .publication-banner img {
@@ -243,30 +270,130 @@ body {
   font-style: italic;
 }
 
-.trace-3d-group-buttons {
-  margin-bottom: 1.25em;
-}
-
-.trace-3d-grid {
+/* Interactive 3D trace viewer (section 1.2) */
+.trace-3d-interactive {
   max-width: 980px;
   margin: 0 auto;
 }
 
-.trace-3d-grid .column {
-  margin-bottom: 1rem;
+.t3d-group-buttons {
+  margin-bottom: 0.75em;
 }
 
-.trace-3d-viewer {
+.t3d-samples {
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.t3d-sample-btn {
+  border-radius: 6px;
+}
+
+.t3d-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #dbdbdb;
+  background: #f5f5f7;
+}
+
+.t3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.t3d-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: grab;
+}
+
+.t3d-canvas canvas:active {
+  cursor: grabbing;
+}
+
+.t3d-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 30%;
+  max-width: 240px;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   background: #000;
 }
 
-.trace-3d-viewer video {
+.t3d-overlay-img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.t3d-overlay figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.t3d-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-top: 0.9em;
+}
+
+.t3d-control {
+  font-size: 0.92rem;
+  color: #363636;
+}
+
+.t3d-control input {
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.t3d-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 0.9em;
+}
+
+.t3d-timeline-label {
+  font-size: 0.92rem;
+  color: #363636;
+  white-space: nowrap;
+}
+
+.t3d-timestep {
+  width: 60%;
+  max-width: 420px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.t3d-task {
+  margin-top: 0.6em;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #4a4a4a;
 }
 
 .publication-body img {

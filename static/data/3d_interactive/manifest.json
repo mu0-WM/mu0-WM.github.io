@@ -1,0 +1,40 @@
+{
+  "groups": {
+    "robot": [
+      {
+        "id": "sample_000007_pick up the orange..mov_f000000",
+        "label": "Pick up the orange"
+      },
+      {
+        "id": "sample_000023_robot_episode_010.mp4_f000000",
+        "label": "Robot episode 010"
+      },
+      {
+        "id": "sample_000011_robot_episode_005.mp4_f000000",
+        "label": "Robot episode 005"
+      },
+      {
+        "id": "sample_000004_put the blue block in the pink area._f000000",
+        "label": "Put the blue block in the pink area"
+      }
+    ],
+    "human": [
+      {
+        "id": "sample_000008_human_episode_008.mp4_f000000",
+        "label": "Human episode 008"
+      },
+      {
+        "id": "sample_000022_human_episode_007.mp4_f000000",
+        "label": "Human episode 007"
+      },
+      {
+        "id": "sample_000034_human_episode_003.mp4_f000000",
+        "label": "Human episode 003"
+      },
+      {
+        "id": "sample_000009_human_episode_006.mp4_f000000",
+        "label": "Human episode 006"
+      }
+    ]
+  }
+}

@@ -331,188 +331,65 @@
         </figure>
       </div>
 
-      <!-- Sample execution videos per baseline (one row per model) -->
+      <!-- Sample execution videos per baseline -->
       <div id="realworld-baselines" style="margin-top: 2.5rem;">
         <h4 class="title is-5 has-text-centered">Sample Execution Videos per Baseline</h4>
         <p class="has-text-centered" style="margin-bottom: 1.5em;">
           <em>Real-robot rollouts, speed up 5&times;.</em>
         </p>
 
-        <div class="container">
-          <p><strong>VLM Only</strong></p>  
-          <div id="realworld-vlm-only-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
+        <div class="field" style="max-width: 36rem; margin: 0 auto 1.5rem;">
+          <label class="label" for="realworld-task-selector">Task</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="realworld-task-selector" aria-label="Task"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-multiline realworld-baseline-grid">
+          <div class="column is-4">
+            <p class="realworld-baseline-label has-text-centered"><strong>VLM + action expert</strong></p>
+            <div class="realworld-baseline-viewer">
+              <video class="realworld-baseline-video" data-prefix="realworld_vlm_only" poster="" autoplay controls
+                muted loop playsinline>
                 <source src="./static/videos/realworld_vlm_only_1.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_vlm_only_2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_vlm_only_3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_vlm_only_4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_vlm_only_5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_vlm_only_6.mp4" type="video/mp4">
-              </video>
-            </div>
           </div>
-        </div>
-
-        <div class="container" style="margin-top: 1.5rem;">
-          <p><strong>&pi;<sub>0</sub></strong></p>
-          <div id="realworld-pi0-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
+          <div class="column is-4">
+            <p class="realworld-baseline-label has-text-centered"><strong>&pi;<sub>0</sub></strong></p>
+            <div class="realworld-baseline-viewer">
+              <video class="realworld-baseline-video" data-prefix="realworld_pi0" poster="" autoplay controls muted
+                loop playsinline>
                 <source src="./static/videos/realworld_pi0_1.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi0_2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi0_3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi0_4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi0_5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi0_6.mp4" type="video/mp4">
-              </video>
-            </div>
           </div>
-        </div>
-
-        <div class="container" style="margin-top: 1.5rem;">
-          <p><strong>&pi;<sub>0.5</sub></strong></p>
-          <div id="realworld-pi05-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
+          <div class="column is-4">
+            <p class="realworld-baseline-label has-text-centered"><strong>&pi;<sub>0.5</sub></strong></p>
+            <div class="realworld-baseline-viewer">
+              <video class="realworld-baseline-video" data-prefix="realworld_pi05" poster="" autoplay controls muted
+                loop playsinline>
                 <source src="./static/videos/realworld_pi05_1.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi05_2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi05_3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi05_4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi05_5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_pi05_6.mp4" type="video/mp4">
-              </video>
-            </div>
           </div>
-        </div>
-
-        <div class="container" style="margin-top: 1.5rem;">
-          <p><strong>TraceGen</strong></p>
-          <div id="realworld-tracegen-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
+          <div class="column is-6">
+            <p class="realworld-baseline-label has-text-centered"><strong>TraceGen + action expert</strong></p>
+            <div class="realworld-baseline-viewer">
+              <video class="realworld-baseline-video" data-prefix="realworld_tracegen" poster="" autoplay controls
+                muted loop playsinline>
                 <source src="./static/videos/realworld_tracegen_1.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_tracegen_2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_tracegen_3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_tracegen_4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_tracegen_5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_tracegen_6.mp4" type="video/mp4">
-              </video>
-            </div>
           </div>
-        </div>
-
-        <div class="container" style="margin-top: 1.5rem;">
-          <p><strong>&mu;<sub>0</sub> (Ours)</strong></p>
-          <div id="realworld-mu0-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
+          <div class="column is-6">
+            <p class="realworld-baseline-label has-text-centered"><strong>Ours (&mu;<sub>0</sub>) + action expert</strong></p>
+            <div class="realworld-baseline-viewer">
+              <video class="realworld-baseline-video" data-prefix="realworld_mu0" poster="" autoplay controls muted
+                loop playsinline>
                 <source src="./static/videos/realworld_mu0_1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_mu0_2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_mu0_3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_mu0_4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_mu0_5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/realworld_mu0_6.mp4" type="video/mp4">
               </video>
             </div>
           </div>

@@ -296,4 +296,43 @@ $(document).ready(function() {
       updateTrace3DVideos('robot');
     }
 
+    var REALWORLD_TASKS = [
+      { id: 1, description: 'Pick up apple and place it in sink' },
+      { id: 4, description: 'Pick up bread and place it in sink' },
+      { id: 2, description: 'Pour almonds into brown box' },
+      { id: 5, description: 'Pour almonds into gray pan' },
+      { id: 3, description: 'Unfold towel' }
+    ];
+
+    function updateRealworldVideos(taskId) {
+      document.querySelectorAll('.realworld-baseline-video').forEach(function (video) {
+        var prefix = video.dataset.prefix;
+        var source = video.querySelector('source');
+
+        if (!prefix || !source) {
+          return;
+        }
+
+        source.src = './static/videos/' + prefix + '_' + taskId + '.mp4';
+        video.load();
+        video.play().catch(function () { });
+      });
+    }
+
+    if ($('#realworld-task-selector').length) {
+      REALWORLD_TASKS.forEach(function (task) {
+        $('#realworld-task-selector').append(
+          $('<option></option>')
+            .val(task.id)
+            .text(task.description)
+        );
+      });
+
+      $('#realworld-task-selector').on('change', function () {
+        updateRealworldVideos(this.value);
+      });
+
+      updateRealworldVideos($('#realworld-task-selector').val());
+    }
+
 })

@@ -416,6 +416,28 @@ body {
   margin: 0;
 }
 
+.realworld-baseline-grid {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.realworld-baseline-label {
+  margin-bottom: 0.5rem;
+}
+
+.realworld-baseline-viewer {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  background: #000;
+}
+
+.realworld-baseline-viewer video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .interpolation-panel {
   background: #f5f5f5;

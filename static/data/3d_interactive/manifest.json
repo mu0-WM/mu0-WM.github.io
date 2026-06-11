@@ -2,38 +2,134 @@
   "groups": {
     "robot": [
       {
-        "id": "sample_000007_pick up the orange..mov_f000000",
-        "label": "Pick up the orange"
+        "id": "agibot_1",
+        "label": "AgiBot 1"
       },
       {
-        "id": "sample_000023_robot_episode_010.mp4_f000000",
-        "label": "Robot episode 010"
+        "id": "agibot_2",
+        "label": "AgiBot 2"
       },
       {
-        "id": "sample_000011_robot_episode_005.mp4_f000000",
-        "label": "Robot episode 005"
+        "id": "agibot_3",
+        "label": "AgiBot 3"
       },
       {
-        "id": "sample_000004_put the blue block in the pink area._f000000",
-        "label": "Put the blue block in the pink area"
+        "id": "agibot_4",
+        "label": "AgiBot 4"
+      },
+      {
+        "id": "agibot_5",
+        "label": "AgiBot 5"
+      },
+      {
+        "id": "agibot_6",
+        "label": "AgiBot 6"
+      },
+      {
+        "id": "droid_1",
+        "label": "Droid 1"
+      },
+      {
+        "id": "droid_2",
+        "label": "Droid 2"
+      },
+      {
+        "id": "droid_3",
+        "label": "Droid 3"
+      },
+      {
+        "id": "droid_4",
+        "label": "Droid 4"
+      },
+      {
+        "id": "droid_5",
+        "label": "Droid 5"
+      },
+      {
+        "id": "droid_6",
+        "label": "Droid 6"
+      },
+      {
+        "id": "ood_robot_1",
+        "label": "OOD 1"
+      },
+      {
+        "id": "ood_robot_2",
+        "label": "OOD 2"
+      },
+      {
+        "id": "ood_robot_3",
+        "label": "OOD 3"
+      },
+      {
+        "id": "ood_robot_4",
+        "label": "OOD 4"
       }
     ],
     "human": [
       {
-        "id": "sample_000008_human_episode_008.mp4_f000000",
-        "label": "Human episode 008"
+        "id": "egodex_1",
+        "label": "EgoDex 1"
       },
       {
-        "id": "sample_000022_human_episode_007.mp4_f000000",
-        "label": "Human episode 007"
+        "id": "egodex_2",
+        "label": "EgoDex 2"
       },
       {
-        "id": "sample_000034_human_episode_003.mp4_f000000",
-        "label": "Human episode 003"
+        "id": "egodex_3",
+        "label": "EgoDex 3"
       },
       {
-        "id": "sample_000009_human_episode_006.mp4_f000000",
-        "label": "Human episode 006"
+        "id": "egodex_4",
+        "label": "EgoDex 4"
+      },
+      {
+        "id": "egodex_5",
+        "label": "EgoDex 5"
+      },
+      {
+        "id": "egodex_6",
+        "label": "EgoDex 6"
+      },
+      {
+        "id": "egoverse_1",
+        "label": "EgoVerse 1"
+      },
+      {
+        "id": "egoverse_2",
+        "label": "EgoVerse 2"
+      },
+      {
+        "id": "egoverse_3",
+        "label": "EgoVerse 3"
+      },
+      {
+        "id": "egoverse_4",
+        "label": "EgoVerse 4"
+      },
+      {
+        "id": "egoverse_5",
+        "label": "EgoVerse 5"
+      },
+      {
+        "id": "egoverse_6",
+        "label": "EgoVerse 6"
+      },
+      {
+        "id": "ood_human_1",
+        "label": "OOD 1"
+      },
+      {
+        "id": "ood_human_2",
+        "label": "OOD 2"
+      },
+      {
+        "id": "ood_human_3",
+        "label": "OOD 3"
+      },
+      {
+        "id": "ood_human_4",
+        "label": "OOD 4"
       }
     ]
   }

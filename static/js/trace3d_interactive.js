@@ -207,7 +207,7 @@ class TraceViewer {
     const pcGeo = new THREE.BufferGeometry();
     pcGeo.setAttribute('position', new THREE.BufferAttribute(pos.slice(), 3));
     pcGeo.setAttribute('color', new THREE.BufferAttribute(col, 3));
-    const pcMat = new THREE.PointsMaterial({ size: 0.006, vertexColors: true, sizeAttenuation: true });
+    const pcMat = new THREE.PointsMaterial({ size: 0.007, vertexColors: true, sizeAttenuation: true });
     this.points = new THREE.Points(pcGeo, pcMat);
     this.points.visible = this.show.points;
     this.group.add(this.points);
@@ -335,8 +335,7 @@ async function init() {
     groups[group].forEach((s, i) => {
       const b = document.createElement('button');
       b.className = 'button is-small t3d-sample-btn';
-      // b.textContent = s.label;
-      b.textContent = 'Sample ' + (i + 1);
+      b.textContent = s.label;
       b.dataset.id = s.id;
       b.addEventListener('click', () => selectSample(s));
       sampleBar.appendChild(b);

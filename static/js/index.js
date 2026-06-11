@@ -297,8 +297,8 @@ $(document).ready(function() {
     }
 
     var REALWORLD_TASKS = [
-      { id: 1, description: 'Pick up apple and place it in sink' },
-      { id: 4, description: 'Pick up bread and place it in sink' },
+      { id: 1, description: 'Pick up plum and place it in sink' },
+      { id: 4, description: 'Pick up kettle and place it in sink' },
       { id: 2, description: 'Pour almonds into brown box' },
       { id: 5, description: 'Pour almonds into gray pan' },
       { id: 3, description: 'Unfold towel' }

@@ -245,7 +245,7 @@ class TraceViewer {
 
     const histSeg = buildSegments(histTracks, () => PURPLE.clone().lerp(new THREE.Color(1, 1, 1), 0.45));
     this.histLine = this._makeLine(histSeg.positions, histSeg.colors, 2.5);
-    if (this.histLine) this.histLine.visible = true;
+    if (this.histLine) this.histLine.visible = false;  // history not shown
 
     // current keypoints as small purple dots
     const kpGeo = new THREE.BufferGeometry();

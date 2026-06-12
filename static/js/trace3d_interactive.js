@@ -106,6 +106,7 @@ class TraceViewer {
     this.show = { pred: true, gt: false, kp: true, points: true };
     this.timestep = Infinity;
     this.maxStep = 0;
+    this.pointSize = 0.007;
     this.group = new THREE.Group();
     this.scene.add(this.group);
 
@@ -189,6 +190,11 @@ class TraceViewer {
     this._renderTraces(t);
   }
 
+  setPointSize(size) {
+    this.pointSize = size;
+    if (this.points) this.points.material.size = size;
+  }
+
   async load(id) {
     this._clear();
     this.resize(); // pick up final layout size before the first render
@@ -207,7 +213,7 @@ class TraceViewer {
     const pcGeo = new THREE.BufferGeometry();
     pcGeo.setAttribute('position', new THREE.BufferAttribute(pos.slice(), 3));
     pcGeo.setAttribute('color', new THREE.BufferAttribute(col, 3));
-    const pcMat = new THREE.PointsMaterial({ size: 0.007, vertexColors: true, sizeAttenuation: true });
+    const pcMat = new THREE.PointsMaterial({ size: this.pointSize, vertexColors: true, sizeAttenuation: true });
     this.points = new THREE.Points(pcGeo, pcMat);
     this.points.visible = this.show.points;
     this.group.add(this.points);
@@ -312,6 +318,8 @@ async function init() {
   const slider = mount.querySelector('.t3d-timestep');
   const stepVal = mount.querySelector('.t3d-timestep-val');
   const stepMax = mount.querySelector('.t3d-timestep-max');
+  const psSlider = mount.querySelector('.t3d-pointsize');
+  const psVal = mount.querySelector('.t3d-pointsize-val');
 
   const viewer = new TraceViewer(canvasHost);
 
@@ -363,6 +371,17 @@ async function init() {
       const t = parseInt(slider.value, 10);
       if (stepVal) stepVal.textContent = String(t);
       viewer.setTimestep(t);
+    });
+  }
+
+  if (psSlider) {
+    const showPs = (v) => { if (psVal) psVal.textContent = v.toFixed(3); };
+    showPs(viewer.pointSize);
+    psSlider.value = String(viewer.pointSize);
+    psSlider.addEventListener('input', () => {
+      const v = parseFloat(psSlider.value);
+      showPs(v);
+      viewer.setPointSize(v);
     });
   }
 

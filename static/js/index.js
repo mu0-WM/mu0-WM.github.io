@@ -27,6 +27,35 @@ $(document).ready(function() {
       });
     });
 
+    var bibtexCopyBtn = document.getElementById('bibtex-copy-btn');
+    var bibtexCode = document.getElementById('bibtex-code');
+
+    if (bibtexCopyBtn && bibtexCode) {
+      bibtexCopyBtn.addEventListener('click', function () {
+        var label = bibtexCopyBtn.querySelector('.bibtex-copy-label');
+        var text = bibtexCode.textContent.trim();
+
+        function showCopied() {
+          if (label) {
+            label.textContent = 'Copied!';
+          }
+          setTimeout(function () {
+            if (label) {
+              label.textContent = 'Copy';
+            }
+          }, 2000);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(showCopied).catch(function () {
+            window.prompt('Copy BibTeX:', text);
+          });
+        } else {
+          window.prompt('Copy BibTeX:', text);
+        }
+      });
+    }
+
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"

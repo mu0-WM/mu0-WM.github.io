@@ -451,7 +451,8 @@
           <div class="column">
             <p>
               <a href="https://arxiv.org/abs/2606.18558"><b>MolmoMotion</b></a>:
-              Forecasting Point Trajectories in 3D with Language Instruction.
+              <strong>Forecasting Point Trajectories in 3D with Language Instruction.</strong>
+              <br>
               Predicts goal-conditioned 3D point trajectories and transfers
               to robot manipulation and video generation.
             </p>
@@ -466,6 +467,109 @@
           </div>
         </div>
       </div>
+      <!-- Item 2: UMA -->
+      <div class="box">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="./static/images/concurrent/uma.png" alt="UMA teaser">
+            </figure>
+            <div class="publication-links concurrent-work-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2606.16917" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://uma-manipulation.github.io/" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="column">
+            <p>
+              <a href="https://arxiv.org/abs/2606.16917"><b>UMA</b></a>:
+              <strong>Unified Motion-Action Modeling for Heterogeneous Robot Learning.</strong>
+              <br>
+              Uses 3D object motion as a shared interface to jointly model
+              visuomotor control and dynamics under a masked generative
+              objective, learning from action-free video, real, and simulated
+              robot data.
+            </p>
+            <details class="mt-2">
+              <summary class="has-text-link" style="cursor: pointer;">How it relates</summary>
+              <p class="mt-2">
+                Like ours, UMA treats embodiment-agnostic 3D object motion as
+                the bridge between action-free video and robot control. Our work
+                focuses on video-only pretraining of a trace-space world model,
+                decoding actionable control through a dedicated Action Expert.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <!-- Item 3: LUCID -->
+      <div class="box">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="./static/images/concurrent/lucid.png" alt="LUCID teaser">
+            </figure>
+            <div class="publication-links concurrent-work-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2606.11628" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://lucid-robot.github.io/" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="column">
+            <p>
+              <a href="https://arxiv.org/abs/2606.11628"><b>LUCID</b></a>:
+              <strong>Learning Embodiment-Agnostic Intent Models from Unstructured Human Videos
+              for Scalable Dexterous Robot Skill Acquisition.</strong>
+              <br>
+              Learns short-horizon manipulation intent from human video as object flow
+              and palm-pose references, executed by embodiment-specific controllers
+              trained in simulation.
+            </p>
+            <details class="mt-2">
+              <summary class="has-text-link" style="cursor: pointer;">How it relates</summary>
+              <p class="mt-2">
+                Like ours, LUCID bridges action-free human video and robot control
+                through an embodiment-agnostic 3D motion interface. LUCID hand-designs
+                an explicit flow-and-palm-pose interface between a separately trained
+                intent predictor and a simulation-RL controller, whereas our work learns
+                a unified trace-space world model from video-only pretraining and decodes
+                control through an Action Expert.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

@@ -579,6 +579,55 @@
           </div>
         </div>
       </div>
+      <!-- Item 4: Track4Action -->
+      <div class="box">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="./static/images/concurrent/track4action.png" alt="Track4Action teaser">
+            </figure>
+            <div class="publication-links concurrent-work-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2608.03727" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://wing0night.github.io/track4action-project-page/" class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="column">
+            <p>
+              <a href="https://arxiv.org/abs/2608.03727"><b>Track4Action</b></a>:
+              <strong>Distilling World-Centric 3D Tracker into Vision-Language-Action Policies.</strong>
+              <br>
+              Uses action-aligned 3D tracker features as privileged supervision to improve
+              VLA policies, while keeping deployment tracker-free.
+            </p>
+            <details class="mt-2">
+              <summary class="has-text-link" style="cursor: pointer;">How it relates</summary>
+              <p class="mt-2">
+                Like ours, Track4Action highlights the value of 3D motion and world-transition
+                cues for robot action learning. While Track4Action distills realized 3D tracker
+                features into a VLA policy as training-time supervision, our work focuses on
+                video-only pretraining of a trace-space world model and uses predicted 3D traces
+                as an explicit interface for actionable robot control through an Action Expert.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>

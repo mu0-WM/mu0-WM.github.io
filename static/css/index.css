@@ -17,6 +17,11 @@ body {
   margin-top: 1.25rem;
 }
 
+/* Keep subscripts (e.g. μ₀) from pushing button labels off-center. */
+.publication-links sub {
+  line-height: 0;
+}
+
 .venue-badge-row {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -27,11 +32,72 @@ body {
   display: inline-block;
   padding: 0.35rem 1rem;
   border-radius: 999px;
-  border: 1px solid #dbdbdb;
-  font-size: 1.25rem;
+  border: 1px solid #f3d6bc;
+  background: #fff8f1;
+  font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 0.02em;
-  color: inherit;
+  color: #bf5700;
+}
+
+/* Same height as the year's digits. The emblem dips just below the letters,
+   so lower the image slightly to keep "CoRL" on the year's baseline. */
+.venue-logo {
+  width: auto;
+  height: 0.83em;
+  vertical-align: -0.048em;
+}
+
+.award-badge-row {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.award-badge {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  padding: 0.3rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(120deg, #fffaf4 0%, #ffeedd 100%) padding-box,
+    linear-gradient(120deg, #fde3c8 0%, #f8c897 100%) border-box;
+  box-shadow: 0 2px 8px rgba(247, 127, 0, 0.08);
+  color: #a0550a;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-wrap: pretty;
+}
+
+.award-badge .fa-trophy {
+  margin-right: 0.4em;
+  color: #f68b1f;
+}
+
+/* A soft glint that sweeps across the badge every few seconds. */
+.award-badge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 42%, rgba(255, 255, 255, 0.85) 50%, transparent 58%) no-repeat;
+  background-size: 250% 100%;
+  background-position: 105% 0;
+  pointer-events: none;
+  animation: award-shine 3s ease-in-out 1s infinite;
+}
+
+@keyframes award-shine {
+  0% { background-position: 105% 0; }
+  60%, 100% { background-position: -5% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-badge::after {
+    animation: none;
+  }
 }
 
 .link-block {

@@ -660,6 +660,116 @@
         </div>
       </div>
 
+      <!-- Item 5: World Motion Models -->
+      <div class="box">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="./static/images/concurrent/wmm.jpg" alt="WMM teaser">
+            </figure>
+            <div class="publication-links concurrent-work-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2610.01742"
+                  class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://jiahuilei.com/projects/wmm/"
+                  class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="column">
+            <p>
+              <a href="https://arxiv.org/abs/2610.01742"><b>World Motion Models (WMM)</b></a>:
+              <strong>Flexible Sequence Modeling of SE(3) Trajectories</strong>.
+              <br>
+              Models diverse 3D motion using sparse SE(3) trajectories
+              with flexible conditioning, supporting future prediction,
+              motion planning, robot control, and retargeting.
+            </p>
+            <details class="mt-2">
+              <summary class="has-text-link" style="cursor: pointer;">How it relates</summary>
+              <p class="mt-2">
+                Like ours, WMM explores structured 3D trajectories as a
+                shared representation for world modeling and robot learning.
+                While WMM unifies diverse motion tasks through flexible
+                SE(3) trajectory modeling, our work focuses on scalable
+                video-only pretraining in 3D trace space, connecting
+                predicted traces to robot actions through a dedicated
+                Action Expert. WMM also evaluates on the TraceGen benchmark.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6: Trace-WAM -->
+      <div class="box">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="./static/images/concurrent/tracewam.png" alt="Trace-WAM teaser">
+            </figure>
+            <div class="publication-links concurrent-work-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2610.36840"
+                  class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://trace-wam.github.io/"
+                  class="external-link button is-small is-rounded is-light"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="column">
+            <p>
+              <a href="https://arxiv.org/abs/2610.36840"><b>Trace-WAM</b></a>:
+              <strong>Learning to Act via 3D Motion Prediction for World Action Models</strong>.
+              <br>
+              Jointly learns future video, 3D motion, and robot actions,
+              using motion prediction as auxiliary supervision to improve
+              manipulation performance without requiring motion prediction
+              at inference.
+            </p>
+            <details class="mt-2">
+              <summary class="has-text-link" style="cursor: pointer;">How it relates</summary>
+              <p class="mt-2">
+                Like ours, Trace-WAM uses 3D motion prediction for robot learning,
+                building on TraceGen's annotation pipeline and μ₀'s B-spline
+                trajectory representation. While Trace-WAM treats motion prediction
+                as training-only auxiliary supervision, our work focuses on
+                video-only pretraining of a trace-space world model and uses
+                predicted traces to condition an Action Expert at inference.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
